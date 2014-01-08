@@ -30,3 +30,22 @@ Todo
 * responsiveness (different displays support)
 * switching between dashboards
 * adding dashboards without need to deploy
+
+Donations
+========
+
+Any donations are welcome and should result in more features in less time :)
+
+BTC address: `1AAkZXsn9c2EWWbo7yzDEgMz1b3wMBN52Q`
+
+LTC address: `LehFD6SvT3PfE4gBbrQwhXdrmFWwdrFxrU`
+
+Author
+======
+
+Wojtek Siudzinski - [@suda](https://twitter.com/suda)
+
+License
+=======
+
+Distributed under the [MIT license](https://github.com/suda/dashing-mining-dashboard/blob/master/LICENSE)

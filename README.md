@@ -32,6 +32,9 @@ You can do this on any computer (not nesessary your worker).
 
 On iOS you can add this page to home screen for better experience.
 
+
+If you have any problems with setting up this dashboard, [create new issue](https://github.com/suda/dashing-mining-dashboard/issues/new) and I'll try to help.
+
 Todo
 ====
 

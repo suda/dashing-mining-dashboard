@@ -25,13 +25,32 @@
 
   <script type='text/javascript'>
   $(function() {
-    Dashing.widget_base_dimensions = [180, 270]
-    Dashing.numColumns = 4
+    Dashing.widget_margins = [5, 5];
+    Dashing.numColumns = $(window).width() > $(window).height() ? 4 : 2;
+    Dashing.widget_base_dimensions = [
+      ($(window).width() / Dashing.numColumns) - (Dashing.widget_margins[0] * 2)
+    , (($(window).height() - 15) / (Dashing.numColumns == 2 ? 4 : 2)) - (Dashing.widget_margins[1] * 2)];
+  
+    // iPad landscape
+    // Dashing.widget_base_dimensions = [180, 270]
+    // Dashing.numColumns = 4
+
+    // iPad portrait
+    // Dashing.widget_base_dimensions = [360, 240]
+    // Dashing.numColumns = 2
+
+    // iPhone 3.5"
+    // Dashing.widget_base_dimensions = [355, 240]
+    // Dashing.numColumns = 2
+
+    // IPHONE 4"
+    // Dashing.widget_base_dimensions = [280, 238]
+    // Dashing.numColumns = 2
   });
   </script>
 </head>
-  <body>
-    <div id="container" style="margin-top: 10px;">
+  <body onorientationchange="window.location.reload()">
+    <div id="container">
       <div class="gridster">
         <ul>
           <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">

@@ -1,7 +1,7 @@
 Dashing mining dashboard
 ====================
 
-[Dashing](https://github.com/Shopify/dashing) dashboard designed for monitoring cryptocurrency mining.
+[Dashing](https://github.com/Shopify/dashing) web dashboard designed for monitoring cryptocurrency mining. Works on both desktop and mobile browsers.
 
 ![iPad Dashboard](http://f.cl.ly/items/1l1w1K0F1K2i0K1n172E/dashboard.png)
 
@@ -10,24 +10,35 @@ DMD allows you to easily aggregate statistics from multiple cgminer instances vi
 Features
 ========
 
-* simple setup ([about 30 seconds on Heroku](https://github.com/Shopify/dashing/wiki/How-to%3A-Deploy-to-Heroku))
+* simple setup
 * automatic refresh
+* responsive layout
 * displaying khps and GPU temperature graphs and shares accepted, rejected, HW errors, time elapsed time values
-* mobile friendly (currently horizontal iPad)
+* mobile friendly web app (view on any mobile or desktop browser)
 
 Setup
 =====
 
-1. Clone repository: `git clone https://github.com/suda/dashing-mining-dashboard.git`
-2. Rename/duplicate `default.erb` in `dashboards` directory to your dashboard names
-3. Follow [Heroku deployment instructions](https://github.com/Shopify/dashing/wiki/How-to%3A-Deploy-to-Heroku)
-4. Set `AUTH_TOKEN` config variable using Heroku toolbelt: `heroku config:set AUTH_TOKEN=your_secret_token`
-5. Start [sending events using agent](https://github.com/suda/dashing-mining-agent)
+You can do this on any computer (not nesessary your worker).
+
+1. Create Heroku account and install toolbelt: https://devcenter.heroku.com/articles/quickstart
+2. Clone repository: `git clone https://github.com/suda/dashing-mining-dashboard.git`
+3. Enter directory: `cd dashing-mining-dashboard`
+4. Create Heroku application: `heroku apps:create APP_NAME`
+5. Rename/duplicate `default.erb` in `dashboards` directory to your worker names. Every worker should have it's own dashboard.
+6. Set `AUTH_TOKEN` config variable using Heroku toolbelt: `heroku config:set AUTH_TOKEN=your_secret_token`
+7. Deploy your dashboard to Heroku: `git push heroku master`
+8. Start [sending events using agent](https://github.com/suda/dashing-mining-agent)
+9. Visit your dashboard at `http://APP_NAME.herokuapp.com/WORKER_NAME`
+
+On iOS you can add this page to home screen for better experience.
+
+
+If you have any problems with setting up this dashboard, [create new issue](https://github.com/suda/dashing-mining-dashboard/issues/new) and I'll try to help.
 
 Todo
 ====
 
-* responsiveness (different displays support)
 * switching between dashboards
 * adding dashboards without need to deploy
 

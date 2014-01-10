@@ -12,6 +12,7 @@ Features
 
 * simple setup
 * automatic refresh
+* responsive layout
 * displaying khps and GPU temperature graphs and shares accepted, rejected, HW errors, time elapsed time values
 * mobile friendly web app (view on any mobile or desktop browser)
 
@@ -38,7 +39,6 @@ If you have any problems with setting up this dashboard, [create new issue](http
 Todo
 ====
 
-* responsiveness (different displays support)
 * switching between dashboards
 * adding dashboards without need to deploy
 

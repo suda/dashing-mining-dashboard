@@ -1,7 +1,9 @@
 Dashing mining dashboard
 ====================
 
-[Dashing](https://github.com/Shopify/dashing) web dashboard designed for monitoring cryptocurrency mining. Works on both desktop and mobile browsers.
+[Dashing](https://github.com/Shopify/dashing) web dashboard designed for monitoring cryptocurrency mining. Works on both desktop and mobile browsers
+
+Check out [a sample dashboard](http://mining-dashboard.herokuapp.com/gigabyte).
 
 ![iPad Dashboard](http://f.cl.ly/items/1l1w1K0F1K2i0K1n172E/dashboard.png)
 

@@ -279,8 +279,74 @@ h3 {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 320px) {
   #container {
-    padding-top: 40px;
+    padding-top: 20px;
+  }
+
+  .widget {
+    padding-top: 5px;
+  }
+
+  h1 {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .widget-number .change-rate {
+    font-size: 16px;
+  }
+
+  .updated-at {
+    font-size: 9px;
+  }
+
+  .widget-temperature .x_ticks_d3,
+  .widget-graph .y_ticks {
+    font-size: 9px; 
+  }
+}
+
+@media (max-width: 320px) and (orientation:landscape) {
+  #container {
+    padding-top: 10px;
+  }
+
+  .widget {
+    padding-top: 5px;
+  }
+
+  h1 {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .widget-number .change-rate {
+    display: none;
+  }
+
+  .updated-at {
+    font-size: 6px;
+  }
+
+  .widget-temperature .x_ticks_d3,
+  .widget-graph .y_ticks {
+    font-size: 7px; 
+  }
+
+  .widget-temperature .updated-at {
+    bottom: 15px;
   }
 }

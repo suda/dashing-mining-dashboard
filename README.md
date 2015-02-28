@@ -23,7 +23,7 @@ Setup
 
 You can do this on any computer (not nesessary your worker).
 
-1. Create Heroku account and install toolbelt: https://devcenter.heroku.com/articles/quickstart
+1. Create Heroku account and install toolbelt: https://toolbelt.heroku.com/
 2. Clone repository: `git clone https://github.com/suda/dashing-mining-dashboard.git`
 3. Enter directory: `cd dashing-mining-dashboard`
 4. Create Heroku application: `heroku apps:create APP_NAME`

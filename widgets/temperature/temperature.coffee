@@ -36,7 +36,7 @@ class Dashing.Temperature extends Dashing.Widget
 
       x_axis = new Rickshaw.Graph.Axis.X(graph: @graph, ticks: points.length + 2, tickValues:values, tickFormat: (x) ->      
         if x != Math.round(x)
-          'GPU #' + Math.floor(x).toString()                
+          'Sensor #: ' + Math.floor(x).toString()                
       )
       
     @graph.render()

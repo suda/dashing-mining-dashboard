@@ -64,7 +64,7 @@ Below are instructions of setting this up on an Ubuntu server (tested with Raspb
 13. Start [sending events using agent](https://github.com/suda/dashing-mining-agent)
 14. Visit your dashboard at `http://IP/WORKER_NAME`
 15. If everything is working properly, add the following to automatically start the dashing server on startup
-* Copy dashboard.sh to service directory (`sudo cp /opt/dashing-mining-dashboard/dashboard.sh /etc/init.d/`)
+* Copy dashboard.sh to service directory (`sudo cp /opt/dashing-mining-dashboard/dashboard.sh /etc/init.d/dashboard`)
 * Update permissions of the file (`sudo chmod 755 /etc/init.d/dashboard`)
 * Update rc.d (`sudo update-rc.d dashboard defaults`)
 * Reboot and verify it starts up automatically

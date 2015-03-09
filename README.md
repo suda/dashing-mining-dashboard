@@ -90,6 +90,7 @@ Your agent can now send modified temperature and hashing units.  Be sure to upda
 config.ru Settings
 ====
 There are currently two editable options with `config.ru`
+
 1. `set :auth_token, ENV['AUTH_TOKEN']`
 * Only edit if you ar ehosting your own dashing server
 2. `set :protection, :except => :frame_options`

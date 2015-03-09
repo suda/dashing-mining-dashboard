@@ -87,6 +87,14 @@ Your agent can now send modified temperature and hashing units.  Be sure to upda
 * With `<div data-id="<%= params[:dashboard] %>_temperature" data-view="Temperature" data-title="Temperature (&deg;[PROPERUNITS])" style="background-color:#12B0C5;">`
 * `[PROPERUNITS]` = "C or F"
 
+config.ru Settings
+====
+There are currently two editable options with `config.ru`
+1. `set :auth_token, ENV['AUTH_TOKEN']`
+* Only edit if you ar ehosting your own dashing server
+2. `set :protection, :except => :frame_options`
+* Remove or add # in-front (comment out) if you do not want your dashboard to be able to be included within other sites
+
 Todo
 ====
 

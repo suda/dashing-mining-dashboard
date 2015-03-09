@@ -92,6 +92,7 @@ Todo
 
 * switching between dashboards
 * adding dashboards without need to deploy
+* add global dashboard
 * update data_title in dashboards dynamically to reflect unit types being sent to them (temperature and hash)
 
 Donations

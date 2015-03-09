@@ -35,26 +35,35 @@ You can do this on any computer (not nesessary your worker).
 
 On iOS you can add this page to home screen for better experience.
 
-[Optional] Setup on your own Ubuntu Server
+[Optional] Setup on your own Ubuntu Dashing Server
 =====
 
-Instead of using Heroku, you cna choose to setup the required pieces on your own web server.
+Instead of using Heroku, you can choose to setup the required pieces on your own web server.
 Below are instructions of setting this up on an Ubuntu server (tested with Raspberry PI with Raspbian)
 
 1. Setup Ubuntu flavor on your device with minimal installation
 2. Perform updates and install dependencies
 * `sudo apt-get update`
-* `sudo apt-get install git-core git build-essential libssl-dev zlib1g-dev`
+* `sudo apt-get upgrade`
+* `sudo apt-get install libssl-dev`
 3. Change directory to opt (`cd /opt`)
-4. Clone repository: `sudo git clone https://github.com/suda/dashing-mining-dashboard.git`
-5. Enter directory: `cd dashing-mining-dashboard`
-6. Rename/duplicate `default.erb` in `dashboards` directory to your worker names. Every worker should have it's own dashboard. (`sudo cp default.erb worker_name.erb`)
-7. Edit `config.ru` and replace `set :auth_token, ENV['AUTH_TOKEN']` with `set :auth_token, 'YourSecureKey`
-8. Bundle your dashboard (`bundle`)
-9. Start the dashboard (`dashing start`)
-10. Start [sending events using agent](https://github.com/suda/dashing-mining-agent)
-11. Visit your dashboard at `http://IP/WORKER_NAME`
-12. If everything is working properly, add the following to automatically start the dashing server on startup
+4. Install node, needed because dashing installs the execjs gem and uses coffeescript
+* `sudo curl -O http://node-arm.herokuapp.com/node_latest_armhf.deb`
+* `sudo dpkg -i node_latest_armhf.deb`
+5. Install ruby 1.9.3
+* `sudo apt-get install ruby ruby-dev`
+6. Install dashing
+* `echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc`
+* `sudo gem install bundler dashing`
+7. Clone repository: `sudo git clone https://github.com/suda/dashing-mining-dashboard.git`
+8. Enter directory: `cd dashing-mining-dashboard`
+9. Rename/duplicate `default.erb` in `dashboards` directory to your worker names. Every worker should have it's own dashboard. (`sudo cp default.erb worker_name.erb`)
+10. Edit `config.ru` and replace `set :auth_token, ENV['AUTH_TOKEN']` with `set :auth_token, 'YourSecureKey`
+11. Bundle your dashboard (`bundle`)
+12. Start the dashboard (`dashing start`)
+13. Start [sending events using agent](https://github.com/suda/dashing-mining-agent)
+14. Visit your dashboard at `http://IP/WORKER_NAME`
+15. If everything is working properly, add the following to automatically start the dashing server on startup
 * Copy dashboard.sh to service directory (`sudo cp /opt/dashing-mining-dashboard/dashboard.sh /etc/init.d/`)
 * Update permissions of the file (`sudo chmod 755 /etc/init.d/dashboard`)
 * Update rc.d (`sudo update-rc.d dashboard defaults`)
@@ -65,7 +74,7 @@ If you have any problems with setting up this dashboard, [create new issue](http
 [Optional] Edit Dashboard Units
 =====
 
-Your agent can now send modified temperature and hashing units.  Be sure to update your dashboard if oyu change the defaults otherwise visually the dtaa will not make sense.
+Your agent can now send modified temperature and hashing units.  Be sure to update your dashboard if you change the defaults otherwise visually the data will not make sense.
 
 1. Navigate to the `dashboards` directory
 2. Edit `layout.erb`

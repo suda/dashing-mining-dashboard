@@ -7,7 +7,7 @@ Check out [a sample dashboard](http://mining-dashboard.herokuapp.com/gigabyte).
 
 ![iMac, iPad and iPhone Dashboard](http://f.cl.ly/items/280W0j1x1q2L3K0D1O1C/placeit.jpg)
 
-DMD allows you to easily aggregate statistics from multiple cgminer instances via [agent script](https://github.com/suda/dashing-mining-agent).
+DMD allows you to easily aggregate statistics from multiple cgminer/cpuminer instances via [agent script](https://github.com/suda/dashing-mining-agent).
 
 Features
 ========
@@ -105,6 +105,7 @@ Todo
 * adding dashboards without need to deploy
 * add global dashboard
 * update data_title in dashboards dynamically to reflect unit types being sent to them (temperature and hash)
+* option to add pool dashboards
 
 Donations
 ========

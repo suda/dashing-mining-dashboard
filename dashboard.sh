@@ -26,7 +26,7 @@
 # Based on  Faraz Haider's LifeRay Startup Service script
 # https://gist.github.com/haiderfaraz/2773431
  
-DASHING_DIR=/opt/dashing-mining-dashboard
+DASHING_DIR=/opt/dashing-mining-dashboard/
 GEM_HOME=/var/lib/gems/1.9.1
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
  

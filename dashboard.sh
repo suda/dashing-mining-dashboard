@@ -49,8 +49,8 @@ ps aux|grep -i dashing
 ;;
  
 *)
-echo “Dashing”
-echo $”Usage: $0 {start|stop|status|logs}”
+echo "Dashing"
+echo $"Usage: $0 {start|stop|status|logs}"
 exit 1
 esac
 exit 0

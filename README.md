@@ -51,10 +51,9 @@ Below are instructions of setting this up on an Ubuntu server (tested with Raspb
 * `sudo curl -O http://node-arm.herokuapp.com/node_latest_armhf.deb`
 * `sudo dpkg -i node_latest_armhf.deb`
 5. Install ruby 1.9.3
-* `sudo apt-get install ruby ruby-dev`
+* `sudo apt-get install ruby ruby-dev screen`
 6. Install dashing
 * `echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc`
-* `sudo env REALLY_GEM_UPDATE_SYSTEM=1 gem update --system`
 * `sudo gem install bundler dashing`
 7. Clone repository: `sudo git clone https://github.com/suda/dashing-mining-dashboard.git`
 8. Enter directory: `cd dashing-mining-dashboard`
@@ -69,7 +68,7 @@ Below are instructions of setting this up on an Ubuntu server (tested with Raspb
 16. If everything is working properly, add the following to automatically start the dashing server on startup
 * Copy dashboard.sh to service directory (`sudo cp /opt/dashing-mining-dashboard/dashboard.sh /etc/init.d/dashboard`)
 * Update permissions of the file (`sudo chmod 755 /etc/init.d/dashboard`)
-* Update rc.d (`sudo update-rc.d dashboard defaults`)
+* Update `/etc/rc.local` and add the following line (`sudo /usr/bin/screen -dmS dashing /etc/init.d/dashboard start`)
 * Reboot and verify it starts up automatically
 
 If you have any problems with setting up this dashboard, [create new issue](https://github.com/suda/dashing-mining-dashboard/issues/new) and I'll try to help.

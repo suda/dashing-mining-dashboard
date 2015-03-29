@@ -54,6 +54,7 @@ Below are instructions of setting this up on an Ubuntu server (tested with Raspb
 * `sudo apt-get install ruby ruby-dev`
 6. Install dashing
 * `echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc`
+* `sudo env REALLY_GEM_UPDATE_SYSTEM=1 gem update --system`
 * `sudo gem install bundler dashing`
 7. Clone repository: `sudo git clone https://github.com/suda/dashing-mining-dashboard.git`
 8. Enter directory: `cd dashing-mining-dashboard`
@@ -61,8 +62,8 @@ Below are instructions of setting this up on an Ubuntu server (tested with Raspb
 10. Edit `config.ru` and replace `set :auth_token, ENV['AUTH_TOKEN']` with `set :auth_token, 'YourSecureKey`
 11. Adjust permissions of your dahsing-mining-dashboard directory
 * `sudo chmod 755 /opt/dashing-mining-dashboard`
-12. Bundle your dashboard (`bundle`)
-13. Start the dashboard (`dashing start`)
+12. Bundle your dashboard (`bundle install`)
+13. Start the dashboard (`sudo dashing start`)
 14. Start [sending events using agent](https://github.com/suda/dashing-mining-agent)
 15. Visit your dashboard at `http://IP/WORKER_NAME`
 16. If everything is working properly, add the following to automatically start the dashing server on startup

@@ -45,14 +45,14 @@ Below are instructions of setting this up on an Ubuntu server (tested with Raspb
 2. Perform updates and install dependencies
 * `sudo apt-get update`
 * `sudo apt-get upgrade`
-* 
+*
 3. Based on Platform, perform the following
 *
 * Ubuntu
 * `sudo apt-get install ruby ruby-dev screen build-essential nodejs`
 * `sudo gem install bundler`
 * `sudo gem install dashing`
-* 
+*
 * Raspberry Pi
 * `sudo apt-get install git libssl-dev ruby ruby-dev screen`
 *  Change directory to opt (`cd /opt`)
@@ -61,7 +61,7 @@ Below are instructions of setting this up on an Ubuntu server (tested with Raspb
 * `sudo dpkg -i node_latest_armhf.deb`
 * `echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc`
 * `sudo gem install bundler dashing`
-* 
+*
 4. Clone repository: `sudo git clone https://github.com/suda/dashing-mining-dashboard.git`
 5. Enter directory: `cd dashing-mining-dashboard`
 6. Rename/duplicate `default.erb` in `dashboards` directory to your worker names. Every worker should have it's own dashboard. (`sudo cp default.erb worker_name.erb`)
@@ -113,6 +113,13 @@ Todo
 * add global dashboard
 * update data_title in dashboards dynamically to reflect unit types being sent to them (temperature and hash)
 * option to add pool dashboards
+
+[Contributions welcome](http://contributionswelcome.org/)
+====
+
+All contributions (no matter if small) are always welcome.
+
+To see how you can help and where to start [see Contributing file](CONTRIBUTING.md).
 
 Donations
 ========

@@ -2,7 +2,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     atomic (1.1.14)
-    backports (3.17.2)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -22,27 +21,26 @@ GEM
       thor
     eventmachine (1.0.3)
     execjs (2.0.2)
-    multi_json (1.14.1)
+    multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    rack (2.2.2)
-    rack-protection (2.0.8.1)
+    rack (2.2.3)
+    rack-protection (2.2.0)
       rack
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.5)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.13)
-    sinatra (2.0.8.1)
+    sinatra (2.2.0)
       mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
+      rack (~> 2.2)
+      rack-protection (= 2.2.0)
       tilt (~> 2.0)
-    sinatra-contrib (2.0.8.1)
-      backports (>= 2.8.2)
+    sinatra-contrib (2.2.0)
       multi_json
       mustermann (~> 1.0)
-      rack-protection (= 2.0.8.1)
-      sinatra (= 2.0.8.1)
+      rack-protection (= 2.2.0)
+      sinatra (= 2.2.0)
       tilt (~> 2.0)
     sprockets (4.0.0)
       concurrent-ruby (~> 1.0)
